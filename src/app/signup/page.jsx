@@ -12,9 +12,15 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 import React from "react";
 
 const SignUpPage = () => {
+
+
+    const router = useRouter();
+
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -28,11 +34,17 @@ const SignUpPage = () => {
           password,
           
       });
-      console.log("Hima , ", { data, error });
+      if (error) {
+          alert("SignUp Failed because your email already exists");
+      }
+      else {
+          alert("SignUp Successfully Your Account");
+          router.push('/');
+      }
   };
   return (
     <div>
-      signup
+     
       <Card className="border mx-auto  py-10 my-5">
         <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
