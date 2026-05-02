@@ -39,7 +39,7 @@ const SignUpPage = () => {
       }
       else {
           alert("SignUp Successfully Your Account");
-          router.push('/');
+          router.push('/signin');
       }
   };
   return (
