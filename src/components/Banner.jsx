@@ -2,7 +2,7 @@ import { Button } from '@heroui/react';
 import Image from 'next/image';
 import React from 'react';
 import { HiOutlineFire, HiOutlineShoppingBag } from 'react-icons/hi';
-
+import 'animate.css';
 const Banner = () => {
     return (
         <div className=' my-5'>
@@ -16,9 +16,9 @@ const Banner = () => {
         Hot Deals 🔥
       </div>
       
-      <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-800 leading-tight mb-6">
+      <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-800 leading-tight mb-6 animate__animated animate__bounceInLeft">
         Grab the Best <br />
-        <span className="text-orange-500 italic">Summer Sale</span>
+        <span className="text-orange-500 italic animate__animated  animate__bounceInRight">Summer Sale</span>
       </h1>
       
       <p className="text-lg text-slate-600 mb-8 max-w-lg mx-auto lg:mx-0">

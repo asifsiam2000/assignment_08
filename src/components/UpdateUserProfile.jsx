@@ -9,7 +9,7 @@ const UpdateUserProfile = () => {
     e.preventDefault();
     const name = e.target.name.value;
     const image = e.target.image.value;
-    console.log(name, "hima ", image);
+
 
     await authClient.updateUser({
      image,

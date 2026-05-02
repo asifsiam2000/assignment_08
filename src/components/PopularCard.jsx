@@ -2,7 +2,7 @@ import { Button, Card, CardFooter } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineLightBulb, HiStar } from "react-icons/hi";
-
+import 'animate.css';
 const PopularCard = async () => {
     
     
@@ -15,7 +15,7 @@ const PopularCard = async () => {
       
       {/* 1. Popular Products Section */}
       <section>
-        <h2 className="text-3xl font-bold text-center mb-10">Popular Products</h2>
+        <h2 className="text-3xl font-bold text-center mb-10 animate__animated animate__backInDown">Popular Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {popularProducts.slice(0 , 3).map((product) => (
             <Card shadow="sm" key={product.id} >
@@ -54,7 +54,7 @@ const PopularCard = async () => {
       {/* 2. Summer Care Tips Section */}
       <section className="bg-blue-50 p-10 rounded-3xl">
         <h2 className="text-3xl font-bold text-center mb-10 flex justify-center items-center gap-3">
-          <HiOutlineLightBulb className="text-yellow-500" /> Summer Care Tips
+          <HiOutlineLightBulb className="text-yellow-500 animate__animated animate__rubberBand" /> Summer Care Tips
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-400">
@@ -74,7 +74,7 @@ const PopularCard = async () => {
 
       {/* 3. Top Brands Section */}
       <section>
-        <h2 className="text-3xl font-bold text-center mb-10">Top Brands</h2>
+        <h2 className="text-3xl font-bold text-center mb-10 animate__animated animate__bounceInUp">Top Brands</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {['SunShade', 'GlowGuard', 'AquaFlow', 'SummerVibe'].map((brand) => (
             <Card key={brand} className="flex items-center justify-center p-8 bg-gray-50 border-none shadow-none hover:bg-gray-100 transition">

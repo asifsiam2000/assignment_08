@@ -2,7 +2,7 @@
 import UpdateUserProfile from "@/components/UpdateUserProfile";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Card } from "@heroui/react";
-
+import 'animate.css';
 
 const ProfilePage = () => {
     const { data: session } = authClient.useSession();
@@ -15,7 +15,7 @@ const ProfilePage = () => {
           <Avatar.Image alt="John Doe" src={user?.image} />
           <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
               </Avatar>
-              <h2 className="font-bold text-2xl text-[#660707]">{user?.name}</h2>
+              <h2 className="font-bold text-2xl text-[#660707]  animate__animated animate__fadeInRight">{user?.name}</h2>
               <p className="text-muted">{user?.email}</p>
 
               <UpdateUserProfile></UpdateUserProfile>
